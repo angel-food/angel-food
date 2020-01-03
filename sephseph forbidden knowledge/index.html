@@ -1,76 +1,78 @@
-
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body style="padding:10px;">
-        
-      <div class="row text-center text-lg-left">
-        
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="padding:10px;">
+
+    <div class="row text-center text-lg-left">
+
         <div id="tpl" class="col-lg-2 col-md-4 col-xs-6" style="margin-bottom:10px;display:none">
-          <a href="#">
-            <div class="img-fluid img-thumbnail" ></div>
-          </a>
+            <a href="#">
+                <div class="img-fluid img-thumbnail"></div>
+            </a>
         </div>
-        
-        
-      </div>
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-			
-			$.get('https://angel-food.github.io/sephseph%20forbidden%20knowledge/jestertune', function(data){
-				var m = data.split('\n').map(line => line.split(','))
-			
-			
-				var $t = $('#tpl')
-				m = shuffle(m)
-				$.each(m, function(i, e) {
-					
-					if (!e[0].length) {
-						return
-					}
-					if (!e[1]) {
-					e[1] = "via.placeholder.com/350x350"
-					}
-					var clone = $t.clone()
-					clone.find('a').attr('href', e[0])
-					var sty="width:100%;padding-bottom:100%;background:url("+e[1]+") 50% 50% no-repeat;background-size: cover;"
-					clone
-						.find('div')
-					    .attr('style', sty)
-					clone.removeAttr('id')
-					setTimeout(function() {
-						$t.before(clone.fadeIn())
-					}, 200)
-					
-				})
-			})
-			
-			function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+    </div>
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
+        $.get('https://angel-food.github.io/sephseph%20forbidden%20knowledge/jestertune', function (data) {
+            var m = data.split('\n').map(line => line.split(','))
 
-  return array;
-}
-        </script>
-    </body>
+
+            var $t = $('#tpl')
+            m = shuffle(m)
+            $.each(m, function (i, e) {
+
+                if (!e[0].length) {
+                    return
+                }
+                if (!e[1]) {
+                    e[1] = "via.placeholder.com/350x350"
+                }
+                var clone = $t.clone()
+                clone.find('a').attr('href', e[0])
+                var sty = "width:100%;padding-bottom:100%;background:url(" + e[1] + ") 50% 50% no-repeat;background-size: cover;"
+                clone
+                    .find('div')
+                    .attr('style', sty)
+                clone.removeAttr('id')
+                setTimeout(function () {
+                    $t.before(clone.fadeIn())
+                }, 200)
+
+            })
+        })
+
+        function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+    </script>
+</body>
+
 </html>

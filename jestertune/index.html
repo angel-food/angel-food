@@ -64,8 +64,8 @@
                     if (!e[1]) {
                         e[1] = "via.placeholder.com/350x350"
                     }
-                    var clone = $t.clone()
-                    clone.find('a').attr('href', e[0])
+                    var clone = $t.clone();
+                    clone.find('a').attr('href', e[0]).attr('alt', e[2]);
                     var sty = "width:100%;padding-bottom:100%;background:url(" + e[1] + ") 50% 50% no-repeat;background-size: cover;"
                     clone
                         .find('div')

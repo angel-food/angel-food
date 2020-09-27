@@ -1,0 +1,65 @@
+<style>
+  #today {
+    font-family: cursive;
+    color: blue;
+  }
+  #weekday {
+    font-family: cursive;
+    color: pink;
+  }
+  #date {
+    font-family: cursive;
+    color: purple;
+  }
+  #time {
+    font-family: monospace;
+    color: pink;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+
+<div class="container">
+  <div id="today">Today is</div>
+  <div id="weekday"></div>
+  <div id="date"></div>
+  <div id="time"></div>
+</div>
+<script>
+
+function digital_clock()
+{
+  const date = new Date()
+
+  // FOR REFERENCE:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+
+  // CODE FOR TIME
+  const timeString = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric', minute: 'numeric', timeZoneName: 'short',
+    timeZone: 'America/New_York'
+  }).format(date);
+
+  // CODE FOR WEEKDAY
+  const weekdayString = new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    timeZone: 'America/New_York'
+  }).format(date);
+
+  // CODE FOR DATE
+  const dateString = new Intl.DateTimeFormat('en-US', {
+    month: 'short', day: 'numeric',
+    timeZone: 'America/New_York'
+  }).format(date);
+
+  document.getElementById('time').innerHTML = timeString;
+  document.getElementById('weekday').innerHTML = weekdayString;
+  document.getElementById('date').innerHTML = dateString;
+  setTimeout('digital_clock()', 500) // 0.5 seconds
+}
+digital_clock();
+
+</script>

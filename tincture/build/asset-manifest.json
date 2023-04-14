@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tincture/static/css/main.1588b24d.css",
+    "main.js": "/tincture/static/js/main.9d874865.js",
+    "static/js/787.6bc75f4e.chunk.js": "/tincture/static/js/787.6bc75f4e.chunk.js",
+    "index.html": "/tincture/index.html",
+    "main.1588b24d.css.map": "/tincture/static/css/main.1588b24d.css.map",
+    "main.9d874865.js.map": "/tincture/static/js/main.9d874865.js.map",
+    "787.6bc75f4e.chunk.js.map": "/tincture/static/js/787.6bc75f4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1588b24d.css",
+    "static/js/main.9d874865.js"
+  ]
+}

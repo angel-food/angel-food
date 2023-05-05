@@ -20,9 +20,18 @@
 
     [2015, "https://www.youtube.com/playlist?list=OLAK5uy_mreMJCpkFZsDxDTTMcA6ZvGjUjKsnholQ",
            "https://upload.wikimedia.org/wikipedia/en/6/65/Passion_Pit_-_Kindred_%28album_cover%29.jpg"],
-    [1999, "", ""],
+
+    [2014, "https://doss.bandcamp.com/album/doss-ep", "https://f4.bcbits.com/img/a4091977525_16.jpg"],
+
     [1999, "", ""],
 
-    ["", ""]
+    [2021, "https://doss.bandcamp.com/album/4-new-hit-songs", "https://f4.bcbits.com/img/a3639146289_16.jpg"],
+
+    [2019, "https://dogbreth.bandcamp.com/album/ever-loving", "https://f4.bcbits.com/img/a1681788590_16.jpg"],
+
+    [2016, "https://dogbreth.bandcamp.com/album/second-home", "https://f4.bcbits.com/img/a1300815586_16.jpg"],
+
+    [2013, "https://dogbreth.bandcamp.com/album/sentimental-health", "https://f4.bcbits.com/img/a3925495347_16.jpg"]
+
   ]
 }
